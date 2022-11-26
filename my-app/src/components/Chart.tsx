@@ -24,7 +24,7 @@ const data = [
     },
     {
         name: "Page B",
-        uv: 868,
+        uv: -868,
         pv: 967,
         amt: 1506,
         cnt: 590
@@ -52,7 +52,7 @@ const data = [
     },
     {
         name: "Page F",
-        uv: 1400,
+        uv: -1400,
         pv: 680,
         amt: 1700,
         cnt: 380
@@ -77,10 +77,10 @@ export default function Chart() {
             <YAxis />
             <Tooltip />
             <Legend />
-            <Area type="monotone" dataKey="amt" fill="#8884d8" stroke="#8884d8" />
+            {/* <Area type="monotone" dataKey="amt" fill="#8884d8" stroke="#8884d8" /> */}
             <Brush dataKey="name" height={30} stroke="#8884d8" />
             <Bar dataKey="pv" barSize={20} fill="#413ea0" />
-            <ReferenceLine y={100} stroke="#000" />
+            <ReferenceLine y={0} stroke="#000" />
             <Line type="monotone" dataKey="uv" stroke="#ff7300" />
             {/* <Scatter dataKey="cnt" fill="red" /> */}
         </ComposedChart>
